@@ -8,6 +8,14 @@ resource "azurerm_consumption_budget_subscription" "this" {
     start_date = var.start_date
   }
 
+  notification {
+    enabled        = true
+    operator       = "GreaterThan"
+    threshold      = 100
+    threshold_type = "Forecasted"
+    contact_emails = var.contact_emails
+  }
+
   # Alert 1: you've actually spent 80% of the budget
   notification {
     enabled        = true

@@ -16,5 +16,5 @@ module "budget" {
   subscription_id = data.azurerm_subscription.current.id
   amount          = var.monthly_budget
   start_date      = "2026-10-01T00:00:00Z"
-  contact_emails  = [var.alert_email]
+  contact_emails  = var.contact_emails
 }

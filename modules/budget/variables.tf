@@ -22,3 +22,4 @@ variable "contact_emails" {
   description = "Who gets the alert emails."
   type        = list(string)
 }
+

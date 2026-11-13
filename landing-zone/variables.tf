@@ -38,7 +38,10 @@ variable "monthly_budget" {
   default     = 20
 }
 
-variable "alert_email" {
+variable "contact_emails" {
   description = "Email addresses for budget alerts."
-  type        = string
+  type        = list(string)
+  default     = ["arshmalhi0@gmail.com"]
 }
+
+
